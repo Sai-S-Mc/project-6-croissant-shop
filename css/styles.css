@@ -70,9 +70,12 @@ footer {
   margin: 30px;
   padding: 0 20px 10px;
 }
-.croissant-type-wrapper h3,
+.croissant-type-wrapper h2,
 .croissant-type-wrapper .name {
   text-transform: capitalize;
+}
+.croissant-type-wrapper h2{
+  font-size: 25px;
 }
 .name .description {
   text-transform: none;
