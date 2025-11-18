@@ -1,6 +1,11 @@
 :root {
   --primary-border-radius: 8px;
 }
+*:focus-visible {
+  border: 3px double brown;
+  outline: none;
+  border-radius: var(--primary-border-radius);
+}
 body {
   font-family: "Afacad Flux", serif;
   background: #a7796d;
@@ -13,25 +18,29 @@ body {
   margin: 80px auto 0;
 }
 .navbar {
-  background-color:#F7C8CD;
+  background-color: #f7c8cd;
 }
 .navbar a {
-  color:rgb(22, 11, 11);
+  color: rgb(22, 11, 11);
 }
-.navbar a.active{
-  font-weight:500;
+.navbar a.active {
+  font-weight: 500;
 }
 .navbar-toggler {
-  color:#ffbcc6;
+  color: #ffbcc6;
 }
-.dropdown-menu{
-background-color:#F7C8CD;
-text-align: center;
+.nav-link:focus-visible {
+  box-shadow: none;
+}
+.dropdown-menu {
+  background-color: #f7c8cd;
+  text-align: center;
 }
 .dropdown-menu a {
-  text-transform:capitalize ;
+  text-transform: capitalize;
 }
-.dropdown-item:hover {
+.dropdown-item:hover,
+.dropdown-item:focus-visible {
   background-color: #ffbcc6;
   font-weight: 500;
 }
@@ -41,7 +50,8 @@ text-align: center;
   transition: all ease-in-out 500ms;
   margin-top: 20px;
 }
-a:hover > .croissant-icon {
+a:hover > .croissant-icon,
+a:focus-visible > .croissant-icon {
   transform: rotateX(180deg) rotateY(180deg);
 }
 a:focus-visible > .croissant-icon {
@@ -49,6 +59,11 @@ a:focus-visible > .croissant-icon {
 }
 a {
   color: brown;
+  transition: all ease-in-out 300ms;
+}
+a:hover,
+a:focus-visible {
+  color: rgb(65, 7, 7);
 }
 a,
 p {
@@ -89,7 +104,8 @@ footer {
   perspective: 1000px;
   width: 251.2px;
 }
-.card-wrapper:hover > .custom-card {
+.card-wrapper:hover > .custom-card,
+.card-wrapper:focus-visible > .custom-card {
   cursor: pointer;
   transform: rotateY(-180deg);
 }
@@ -101,7 +117,7 @@ footer {
   backface-visibility: hidden;
 }
 .back {
-  background-color: #a7796d;
+  background-color: #bd8e83;
   color: rgb(57, 21, 21);
   transform: rotateY(180deg);
   display: flex;
