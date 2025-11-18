@@ -39,9 +39,13 @@ text-align: center;
   color: brown;
   font-size: 25px;
   transition: all ease-in-out 500ms;
+  margin-top: 20px;
 }
 a:hover > .croissant-icon {
   transform: rotateX(180deg) rotateY(180deg);
+}
+a:focus-visible > .croissant-icon {
+  padding-bottom: 7px;
 }
 a {
   color: brown;
@@ -74,7 +78,7 @@ footer {
 .croissant-type-wrapper .name {
   text-transform: capitalize;
 }
-.croissant-type-wrapper h2{
+.croissant-type-wrapper h2 {
   font-size: 25px;
 }
 .name .description {
